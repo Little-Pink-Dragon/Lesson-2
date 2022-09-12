@@ -1,14 +1,22 @@
 ﻿Console.WriteLine("Введите число");
 int a = int.Parse(Console.ReadLine());
+if (a >= 100)
 {
-  if (a == 6 || a == 7) 
-  {
-  Console.WriteLine("{0} выходной день", a);
-  }
-  else if (a < 1 || a > 7) 
-  {
-    Console.WriteLine("{0} не день недли", a);
-  }
-  else Console.WriteLine("{0} рабочий день", a);
+    if (a < 1000)
+    {
+        a = a % 10;
+       Console.WriteLine (a + " - третье число" );
+    }
+    else
+    {
+      while (a > 1000)
+      {
+        a = a / 10;
+      }
+     Console.WriteLine (a % 10 + " - третье число"); 
+    }
 }
-
+else 
+{
+    Console.WriteLine ("Нет третьего числа");
+}
